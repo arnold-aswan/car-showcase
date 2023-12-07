@@ -5,6 +5,7 @@ import { MouseEventHandler } from "react";
 
 interface CustomButtonProps {
   title: String;
+  btnType?: "button" | "submit";
   containerStyles?: String;
   handleClick: MouseEventHandler;
 }
@@ -13,11 +14,12 @@ const CustomButton = ({
   title,
   containerStyles,
   handleClick,
+  btnType,
 }: CustomButtonProps) => {
   return (
     <button
       disabled={false}
-      type={"button"}
+      type={btnType || "button"}
       className={`custom-btn ${containerStyles}`}
       onClick={() => {
         handleClick;
