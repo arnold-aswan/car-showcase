@@ -4,11 +4,7 @@ import Image from "next/image";
 import { Combobox, Transition } from "@headlessui/react";
 import { manufacturers, yearsOfProduction } from "@/constants";
 import { useState, Fragment } from "react";
-
-interface SearchManufacturerProps {
-  manufacturer: String;
-  setManufacturer: (manufacturer: String) => void;
-}
+import { SearchManufacturerProps } from "@/types";
 
 const SearchManufacturer = ({
   manufacturer,
@@ -30,7 +26,7 @@ const SearchManufacturer = ({
     <div className="search-manufacturer">
       <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className="relative w-full">
-          <Combobox.Button className={"absolute top-[14px]"}>
+          <Combobox.Button className="absolute top-[14px]">
             <Image
               src="/car-logo.svg"
               alt="car logo"
@@ -41,8 +37,8 @@ const SearchManufacturer = ({
           </Combobox.Button>
 
           <Combobox.Input
-            className="search-manufacture__input"
-            placeholder="Volkswagen"
+            className="search-manufacturer__input"
+            placeholder="Volkswagen..."
             displayValue={(manufacturer: string) => manufacturer}
             onChange={(e) => setQuery(e.target.value)}
           />
