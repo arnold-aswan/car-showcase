@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import CustomButton from "./CustomButton";
-import { calculateCarRent } from "@/utils";
+import { calculateCarRent, generateCarImageUrl } from "@/utils";
 import CarDetails from "./CarDetails";
 import { CarProps } from "@/types";
 
@@ -12,6 +12,10 @@ const CarCard = ({ car }: CarProps) => {
   const carRent = calculateCarRent(city_mpg, year);
 
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+  };
 
   return (
     <div className="car-card group">
@@ -29,7 +33,8 @@ const CarCard = ({ car }: CarProps) => {
 
       <div className="relative w-full h-40 my-3 object-contain">
         <Image
-          src="/hero.png"
+          src={generateCarImageUrl(car)}
+          // src="/hero.png"
           alt="car model"
           fill
           priority
@@ -68,7 +73,8 @@ const CarCard = ({ car }: CarProps) => {
             containerStyles="w-full py-[16px] rounded-full bg-primary-blue"
             textStyles="text-white text-[14px] leading-[17px] font-bold"
             rightIcon="right-arrow.svg"
-            handleClick={() => setIsOpen(true)}
+            // handleClick={() => setIsOpen(true)}
+            handleClick={handleOpenModal}
           />
         </div>
       </div>
@@ -77,6 +83,7 @@ const CarCard = ({ car }: CarProps) => {
         isOpen={isOpen}
         closeModal={() => setIsOpen(false)}
         car={car}
+        // handleOpenModal={handleOpenModal}
       />
     </div>
   );
