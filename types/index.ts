@@ -1,31 +1,32 @@
 import { MouseEventHandler } from "react";
 
 export interface CustomButtonProps {
-  title: String;
+  title: string;
   btnType?: "button" | "submit";
-  containerStyles?: String;
-  handleClick: MouseEventHandler;
-  textStyles?: String;
-  rightIcon?: String;
+  containerStyles?: string;
+  // handleClick: MouseEventHandler;
+  handleClick: () => void;
+  textStyles?: string;
+  rightIcon?: string;
   isDisabled?: boolean;
 }
 
 export interface SearchManufacturerProps {
-  manufacturer: String;
-  setManufacturer: (manufacturer: String) => void;
+  manufacturer: string;
+  setManufacturer: (manufacturer: string) => void;
 }
 
 export interface CarProps {
-  city_mpg: Number;
-  class: String;
-  combination_mpg: Number;
-  cylinders: Number;
-  displacement: Number;
-  drive: String;
-  fuel_type: String;
-  highway_mpg: Number;
-  make: String;
-  model: String;
-  transmission: String;
-  year: Number;
+  city_mpg: number;
+  class: string;
+  combination_mpg: number;
+  cylinders: number;
+  displacement: number;
+  drive: string;
+  fuel_type: string;
+  highway_mpg: number;
+  make: string;
+  model: string;
+  transmission: string;
+  year: number;
 }
