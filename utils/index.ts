@@ -1,32 +1,15 @@
-// import axios from "axios";
-// // const axios = require("axios");
+import { CarProps, FilterProps } from "@/types";
 
-// const options = {
-//   method: "GET",
-//   url: "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars",
-//   params: { model: "corolla" },
-//   headers: {
-//     "X-RapidAPI-Key": "bbac5565f5msh10c800f11d11ffcp1a5762jsne64db0baf547",
-//     "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
-//   },
-// };
-
-// try {
-//   const response = await axios.request(options);
-//   console.log(response.data);
-// } catch (error) {
-//   console.error(error);
-// }
-
-export const fetchCars = async () => {
+export const fetchCars = async (filters: FilterProps) => {
+  const { manufacturer, year, model, fuel, limit } = filters;
   const headers = {
-    "X-RapidAPI-Key": "bbac5565f5msh10c800f11d11ffcp1a5762jsne64db0baf547",
+    "X-RapidAPI-Key": process.env.RAPID_API_KEY,
     "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
   };
   const response = await fetch(
-    "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla",
+    `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${manufacturer}&year=${year}&model=${model}&limit=${limit}&fuel_type=${fuel}`,
     {
-      headers: headers,
+      headers,
     }
   );
   const result = await response.json();
@@ -46,4 +29,28 @@ export const calculateCarRent = (city_mpg: number, year: number) => {
   const rentalRatePerDay = basePricePerDay + mileageRate + ageRate;
 
   return rentalRatePerDay.toFixed(0);
+};
+
+export const generateCarImageUrl = (car: CarProps, angle?: string) => {
+  const url = new URL("https://cdn.imagin.studio/getimage");
+  const { make, model, year } = car;
+
+  url.searchParams.append("customer", "hrjavascript-mastery");
+  url.searchParams.append("make", make);
+  url.searchParams.append("modelFamily", model.split(" ")[0]);
+  url.searchParams.append("zoomType", "fullscreen");
+  url.searchParams.append("modelYear", `${year}`);
+  // url.searchParams.append('zoomLevel', zoomLevel);
+  url.searchParams.append("angle", `${angle}`);
+
+  return `${url}`;
+};
+
+export const updateSearchparams = (type: string, value: string) => {
+  const searchParams = new URLSearchParams(window.location.search);
+
+  searchParams.set(type, value);
+
+  const pathName = `${window.location.pathname}?${searchParams.toString()}`;
+  return pathName;
 };
