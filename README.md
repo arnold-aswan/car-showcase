@@ -19,14 +19,14 @@ Welcome to the Car Properties Showcase Web Application! This web application is 
    Easily narrow down your search using the following filters:
 
 - **Make:** Filter cars based on their make (e.g., Ford, Toyota, Honda).
-- **Manufacturer:** Explore cars from specific manufacturers (e.g., BMW, Mercedes, Chevrolet).
+- **Model:** Explore cars from specific manufacturers (e.g., corolla, stinger, odyssey, outlander).
 - **Year:** Find cars manufactured in a particular year or within a range.
-- **Fuel Type:** Filter cars based on the type of fuel they use, including gas, electric, or hybrid.
+- **Fuel Type:** Filter cars based on the type of fuel they use, including gas or electric.
 
-3. Responsive Design.<br/>
+1. Responsive Design.<br/>
    The application is built with a responsive design, ensuring a seamless experience across various devices, including desktops, tablets, and mobile phones.
 
-4. User-friendly Interface.<br/>
+2. User-friendly Interface.<br/>
    The intuitive user interface makes navigation easy for users of all levels. Whether you're a tech-savvy user or a casual browser, you'll find the application straightforward and enjoyable to use.
 
 ## Technologies Used
