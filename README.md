@@ -4,6 +4,12 @@
 
 Welcome to the Car Properties Showcase Web Application! This web application is designed to provide users with a visually appealing and user-friendly interface to explore various car properties. Whether you are a car enthusiast or looking for specific information about cars, this application allows you to filter and find cars based on their make, manufacturer, year, and the type of fuel they use.
 
+## Preview
+
+![Screenshot from 2023-12-12 11-55-56](https://github.com/arnold-aswan/car-showcase/assets/135007872/a7d32bd8-cf06-4854-9d38-21824de35895)
+
+![Screenshot from 2023-12-12 11-56-20](https://github.com/arnold-aswan/car-showcase/assets/135007872/39ff467b-40af-4b45-b863-5deec5a18206)
+
 ## Features
 
 1. Car Showcase.<br/>
