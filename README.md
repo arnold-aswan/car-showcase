@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CarHub
 
-## Getting Started
+## Overview
 
-First, run the development server:
+Welcome to the Car Properties Showcase Web Application! This web application is designed to provide users with a visually appealing and user-friendly interface to explore various car properties. Whether you are a car enthusiast or looking for specific information about cars, this application allows you to filter and find cars based on their make, manufacturer, year, and the type of fuel they use.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Car Showcase.<br/>
+   Browse through a diverse collection of cars, each with detailed information about their properties. The application provides a rich display of car images and essential details.
+
+2. Filtering Options.<br/>
+   Easily narrow down your search using the following filters:
+
+- **Make:** Filter cars based on their make (e.g., Ford, Toyota, Honda).
+- **Manufacturer:** Explore cars from specific manufacturers (e.g., BMW, Mercedes, Chevrolet).
+- **Year:** Find cars manufactured in a particular year or within a range.
+- **Fuel Type:** Filter cars based on the type of fuel they use, including gas, electric, or hybrid.
+
+3. Responsive Design.<br/>
+   The application is built with a responsive design, ensuring a seamless experience across various devices, including desktops, tablets, and mobile phones.
+
+4. User-friendly Interface.<br/>
+   The intuitive user interface makes navigation easy for users of all levels. Whether you're a tech-savvy user or a casual browser, you'll find the application straightforward and enjoyable to use.
+
+## Technologies Used
+
+1. NextJS
+2. Material UI
+3. Headless UI
+4. Tailwind CSS
+
+## Project Setup And Installation
+
+### Getting Started
+
+1. Navigate to a directory you would like to clone the project.
+2. Clone the repository in the desired directory: `git clone git@github.com:arnold-aswan/car-showcase.git`
+3. Run `npm install` to install the required dependencies.
+
+### Environment Variables
+
+Create a `.env ` file in the root directory of the cloned repository.
+
+### Cars Details API
+
+1. Sign up to [rapidapi](https://rapidapi.com/)
+2. Search and subscribe to [Cars by Api-Ninjas](https://rapidapi.com/apininjas/api/cars-by-api-ninjas/) api
+3. Get your api key and place it in the `.env` file you created as: `RAPID_API_KEY="your_api_key `
+
+### Setup
+
+Once you have the api key and you've created the `.env` file and placed the api key in there:
+
+1. Open the file with an IDE of your choice i.e Visual studio code.
+2. Navigate to the root directory of the project.
+3. Run `npm run dev` to launch the app in development mode.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Author & License
 
-## Learn More
+[Arnold Aswani](https://github.com/arnold-aswan)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for more details.
